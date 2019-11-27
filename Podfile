@@ -8,6 +8,7 @@ target 'GithubSearchUser-Tutorial' do
   # Pods for GithubSearchUser-Tutorial
   pod 'Alamofire', '~> 5.0.0-rc.3'
   pod 'Kingfisher'
+  pod 'SnapKit'
 
   target 'GithubSearchUser-TutorialTests' do
     inherit! :search_paths

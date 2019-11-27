@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,11 +12,20 @@
 		B8FFCA4C4A59F5482BDEC41D /* Pods_GithubSearchUser_Tutorial_GithubSearchUser_TutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAD1030EBB1FAF7CF08984F /* Pods_GithubSearchUser_Tutorial_GithubSearchUser_TutorialUITests.framework */; };
 		C697EDDC238E90D3006504D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDDB238E90D3006504D4 /* AppDelegate.swift */; };
 		C697EDE0238E90D3006504D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDDF238E90D3006504D4 /* ViewController.swift */; };
-		C697EDE3238E90D3006504D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C697EDE1238E90D3006504D4 /* Main.storyboard */; };
 		C697EDE5238E90D6006504D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C697EDE4238E90D6006504D4 /* Assets.xcassets */; };
-		C697EDE8238E90D6006504D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C697EDE6238E90D6006504D4 /* LaunchScreen.storyboard */; };
 		C697EDF3238E90D6006504D4 /* GithubSearchUser_TutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDF2238E90D6006504D4 /* GithubSearchUser_TutorialTests.swift */; };
 		C697EDFE238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDFD238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift */; };
+		C697EE0D238EB05A006504D4 /* UIPreviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE0C238EB05A006504D4 /* UIPreviewExtension.swift */; };
+		C697EE12238EB29F006504D4 /* SearchUserParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE0F238EB29F006504D4 /* SearchUserParameter.swift */; };
+		C697EE13238EB29F006504D4 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE10238EB29F006504D4 /* UserRepository.swift */; };
+		C697EE14238EB29F006504D4 /* SearchUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE11238EB29F006504D4 /* SearchUserResponse.swift */; };
+		C697EE16238EB49D006504D4 /* GithubAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE15238EB49D006504D4 /* GithubAPIProvider.swift */; };
+		C697EE18238EB4B7006504D4 /* HTTPHeaderLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE17238EB4B7006504D4 /* HTTPHeaderLinkParser.swift */; };
+		C697EE1A238EB4D1006504D4 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE19238EB4D1006504D4 /* Debouncer.swift */; };
+		C697EE1C238EB4F7006504D4 /* ViewControllerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE1B238EB4F7006504D4 /* ViewControllerDataManager.swift */; };
+		C697EE1E238EB78A006504D4 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE1D238EB78A006504D4 /* Utility.swift */; };
+		C697EE20238EBAAF006504D4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C697EE1F238EBAAF006504D4 /* Launch Screen.storyboard */; };
+		C697EE22238EBC8A006504D4 /* SearchUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE21238EBC8A006504D4 /* SearchUserTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +56,7 @@
 		C697EDD8238E90D3006504D4 /* GithubSearchUser-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GithubSearchUser-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C697EDDB238E90D3006504D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C697EDDF238E90D3006504D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C697EDE2238E90D3006504D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C697EDE4238E90D6006504D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C697EDE7238E90D6006504D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C697EDE9238E90D6006504D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C697EDEE238E90D6006504D4 /* GithubSearchUser-TutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GithubSearchUser-TutorialTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C697EDF2238E90D6006504D4 /* GithubSearchUser_TutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchUser_TutorialTests.swift; sourceTree = "<group>"; };
@@ -57,6 +64,17 @@
 		C697EDF9238E90D6006504D4 /* GithubSearchUser-TutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GithubSearchUser-TutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C697EDFD238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchUser_TutorialUITests.swift; sourceTree = "<group>"; };
 		C697EDFF238E90D7006504D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C697EE0C238EB05A006504D4 /* UIPreviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPreviewExtension.swift; sourceTree = "<group>"; };
+		C697EE0F238EB29F006504D4 /* SearchUserParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserParameter.swift; sourceTree = "<group>"; };
+		C697EE10238EB29F006504D4 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		C697EE11238EB29F006504D4 /* SearchUserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserResponse.swift; sourceTree = "<group>"; };
+		C697EE15238EB49D006504D4 /* GithubAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIProvider.swift; sourceTree = "<group>"; };
+		C697EE17238EB4B7006504D4 /* HTTPHeaderLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderLinkParser.swift; sourceTree = "<group>"; };
+		C697EE19238EB4D1006504D4 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
+		C697EE1B238EB4F7006504D4 /* ViewControllerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDataManager.swift; sourceTree = "<group>"; };
+		C697EE1D238EB78A006504D4 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		C697EE1F238EBAAF006504D4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C697EE21238EBC8A006504D4 /* SearchUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserTableViewCell.swift; sourceTree = "<group>"; };
 		E62418CC4E0F8059C13B36D4 /* Pods-GithubSearchUser-Tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-Tutorial.debug.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-Tutorial/Pods-GithubSearchUser-Tutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		F7D12A84D7329DBAA70E1611 /* Pods-GithubSearchUser-Tutorial-GithubSearchUser-TutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-Tutorial-GithubSearchUser-TutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-Tutorial-GithubSearchUser-TutorialUITests/Pods-GithubSearchUser-Tutorial-GithubSearchUser-TutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +117,6 @@
 				838289A546DB7D9DE15B2D9B /* Pods-GithubSearchUser-TutorialTests.debug.xcconfig */,
 				B792E683D7AB17DBD0C60ADE /* Pods-GithubSearchUser-TutorialTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,11 +145,14 @@
 		C697EDDA238E90D3006504D4 /* GithubSearchUser-Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				C697EE0E238EB272006504D4 /* Model */,
+				C697EE0B238EB04B006504D4 /* Helper */,
 				C697EDDB238E90D3006504D4 /* AppDelegate.swift */,
 				C697EDDF238E90D3006504D4 /* ViewController.swift */,
-				C697EDE1238E90D3006504D4 /* Main.storyboard */,
+				C697EE1B238EB4F7006504D4 /* ViewControllerDataManager.swift */,
+				C697EE21238EBC8A006504D4 /* SearchUserTableViewCell.swift */,
 				C697EDE4238E90D6006504D4 /* Assets.xcassets */,
-				C697EDE6238E90D6006504D4 /* LaunchScreen.storyboard */,
+				C697EE1F238EBAAF006504D4 /* Launch Screen.storyboard */,
 				C697EDE9238E90D6006504D4 /* Info.plist */,
 			);
 			path = "GithubSearchUser-Tutorial";
@@ -154,6 +174,28 @@
 				C697EDFF238E90D7006504D4 /* Info.plist */,
 			);
 			path = "GithubSearchUser-TutorialUITests";
+			sourceTree = "<group>";
+		};
+		C697EE0B238EB04B006504D4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C697EE0C238EB05A006504D4 /* UIPreviewExtension.swift */,
+				C697EE15238EB49D006504D4 /* GithubAPIProvider.swift */,
+				C697EE17238EB4B7006504D4 /* HTTPHeaderLinkParser.swift */,
+				C697EE19238EB4D1006504D4 /* Debouncer.swift */,
+				C697EE1D238EB78A006504D4 /* Utility.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C697EE0E238EB272006504D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C697EE0F238EB29F006504D4 /* SearchUserParameter.swift */,
+				C697EE11238EB29F006504D4 /* SearchUserResponse.swift */,
+				C697EE10238EB29F006504D4 /* UserRepository.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DCC0A341F937B6D2AC9C7B47 /* Frameworks */ = {
@@ -275,9 +317,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C697EDE8238E90D6006504D4 /* LaunchScreen.storyboard in Resources */,
+				C697EE20238EBAAF006504D4 /* Launch Screen.storyboard in Resources */,
 				C697EDE5238E90D6006504D4 /* Assets.xcassets in Resources */,
-				C697EDE3238E90D3006504D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,8 +446,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C697EE22238EBC8A006504D4 /* SearchUserTableViewCell.swift in Sources */,
 				C697EDE0238E90D3006504D4 /* ViewController.swift in Sources */,
+				C697EE18238EB4B7006504D4 /* HTTPHeaderLinkParser.swift in Sources */,
+				C697EE1C238EB4F7006504D4 /* ViewControllerDataManager.swift in Sources */,
+				C697EE1E238EB78A006504D4 /* Utility.swift in Sources */,
+				C697EE1A238EB4D1006504D4 /* Debouncer.swift in Sources */,
+				C697EE0D238EB05A006504D4 /* UIPreviewExtension.swift in Sources */,
+				C697EE12238EB29F006504D4 /* SearchUserParameter.swift in Sources */,
+				C697EE14238EB29F006504D4 /* SearchUserResponse.swift in Sources */,
+				C697EE13238EB29F006504D4 /* UserRepository.swift in Sources */,
 				C697EDDC238E90D3006504D4 /* AppDelegate.swift in Sources */,
+				C697EE16238EB49D006504D4 /* GithubAPIProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,25 +491,6 @@
 			targetProxy = C697EDFA238E90D6006504D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C697EDE1238E90D3006504D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C697EDE2238E90D3006504D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C697EDE6238E90D6006504D4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C697EDE7238E90D6006504D4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C697EE00238E90D7006504D4 /* Debug */ = {
@@ -511,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -565,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
