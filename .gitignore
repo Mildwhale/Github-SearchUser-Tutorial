@@ -1,0 +1,5 @@
+*.xcuserstate
+xcschememanagement.plist
+contents.xcworkspacedata
+Podfile.lock
+Pods
