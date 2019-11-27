@@ -5,7 +5,7 @@ https://developer.github.com/v3/search/
 
 ## 요구사항
 
-MacOS Catalina (10.15)
+macOS Catalina (10.15)
 
 Xcode 11.2.1
 
