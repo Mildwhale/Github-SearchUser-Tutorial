@@ -87,7 +87,7 @@ final class ViewControllerDataManager {
     // MARK: Private
     private func handleSearchResult(response: AFDataResponse<Data>, completionHandler: @escaping () -> Void) {
         guard let users = decodeSearchUserResponse(response: response) else {
-            print(response.error.debugDescription)
+            print(response.response)
             completionHandler()
             return
         }
@@ -95,17 +95,11 @@ final class ViewControllerDataManager {
         updateUsers(items: users.items)
 
         completionHandler()
-        
-        // DEBUG Print
-        let currentPage = Utility.extractPage(from: response.response?.url) ?? -1
-        let nextPage = Utility.extractPage(from: latestSearchLink?.next) ?? -1
-        let lastPage = Utility.extractPage(from: latestSearchLink?.last) ?? -1
-        let message = "SearchUser current: \(currentPage), next: \(nextPage), last: \(lastPage)"
-        print(message)
     }
     
     private func decodeSearchUserResponse(response: AFDataResponse<Data>) -> SearchUserResponse? {
         guard response.error == nil, let decodableData = response.data else {
+            print(response.response)
             return nil
         }
         do {
