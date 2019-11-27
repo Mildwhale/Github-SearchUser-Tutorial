@@ -25,3 +25,5 @@ pod install
 ## 프로젝트 실행
 
 프로젝트는 하얀색 아이콘인 **GithubSearchUser-Tutorial.xcworkspace** 파일을 열어서 실행합니다.
+
+앱 사용 중, 검색 결과가 노출되지 않으면 Github의 [API 호출 제한 정책](https://developer.github.com/v3/#rate-limiting)을 확인해봐야 합니다.
