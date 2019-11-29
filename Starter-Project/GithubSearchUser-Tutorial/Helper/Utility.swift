@@ -28,27 +28,18 @@ final class Utility {
         }
         return nil
     }
-    
-    /// https://developer.github.com/v3/#rate-limiting
-    static func appendGitHubClientSecret(url: URL?) -> URL? {
-        guard let url = url, let clientId = GitHubAppKey.clientId, let secret = GitHubAppKey.secret else {
-            return nil
-        }
-        
-        if let components = URLComponents(string: url.absoluteString), components.host == GitHubAppKey.host {
-            var newUrlString = url.absoluteString
-            if let queryItems = components.queryItems {
-                guard queryItems.filter({ $0.name == "client_id" || $0.name == "client_secret" }).isEmpty else {
-                    return url
-                }
-                newUrlString.append("&")
-            } else {
-                newUrlString.append("?")
+}
+
+extension Encodable {
+    var dictionary: [String: Any]? {
+        do {
+            let encodedData = try JSONEncoder().encode(self)
+            if let dictionary = try JSONSerialization.jsonObject(with: encodedData, options: []) as? [String: Any] {
+                return dictionary
             }
-            newUrlString.append("client_id=\(clientId)&client_secret=\(secret)")
-            return URL(string: newUrlString)
-        } else {
-            return url
         }
+        catch {
+        }
+        return nil
     }
 }

@@ -43,7 +43,7 @@ final class SearchUserTableViewCell: UITableViewCell {
         }
     }
     
-    func update(user: User) {
+    func update(user: GithubSearchUser.User) {
         avatarImageView.kf.setImage(with: user.avartarUrl)
         nameLabel.text = user.name
     }

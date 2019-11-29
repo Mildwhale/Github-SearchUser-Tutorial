@@ -16,9 +16,7 @@
 		C697EDF3238E90D6006504D4 /* GithubSearchUser_TutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDF2238E90D6006504D4 /* GithubSearchUser_TutorialTests.swift */; };
 		C697EDFE238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDFD238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift */; };
 		C697EE0D238EB05A006504D4 /* UIPreviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE0C238EB05A006504D4 /* UIPreviewExtension.swift */; };
-		C697EE12238EB29F006504D4 /* SearchUserParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE0F238EB29F006504D4 /* SearchUserParameter.swift */; };
-		C697EE13238EB29F006504D4 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE10238EB29F006504D4 /* UserRepository.swift */; };
-		C697EE14238EB29F006504D4 /* SearchUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE11238EB29F006504D4 /* SearchUserResponse.swift */; };
+		C697EE12238EB29F006504D4 /* GithubSearchUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE0F238EB29F006504D4 /* GithubSearchUserModel.swift */; };
 		C697EE16238EB49D006504D4 /* GithubAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE15238EB49D006504D4 /* GithubAPIProvider.swift */; };
 		C697EE18238EB4B7006504D4 /* HTTPHeaderLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE17238EB4B7006504D4 /* HTTPHeaderLinkParser.swift */; };
 		C697EE1A238EB4D1006504D4 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE19238EB4D1006504D4 /* Debouncer.swift */; };
@@ -65,10 +63,8 @@
 		C697EDFD238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchUser_TutorialUITests.swift; sourceTree = "<group>"; };
 		C697EDFF238E90D7006504D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C697EE0C238EB05A006504D4 /* UIPreviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPreviewExtension.swift; sourceTree = "<group>"; };
-		C697EE0F238EB29F006504D4 /* SearchUserParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserParameter.swift; sourceTree = "<group>"; };
-		C697EE10238EB29F006504D4 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
-		C697EE11238EB29F006504D4 /* SearchUserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserResponse.swift; sourceTree = "<group>"; };
-		C697EE15238EB49D006504D4 /* GithubAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIProvider.swift; sourceTree = "<group>"; };
+		C697EE0F238EB29F006504D4 /* GithubSearchUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchUserModel.swift; sourceTree = "<group>"; };
+		C697EE15238EB49D006504D4 /* GithubAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GithubAPIProvider.swift; path = ../Helper/GithubAPIProvider.swift; sourceTree = "<group>"; };
 		C697EE17238EB4B7006504D4 /* HTTPHeaderLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderLinkParser.swift; sourceTree = "<group>"; };
 		C697EE19238EB4D1006504D4 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		C697EE1B238EB4F7006504D4 /* ViewControllerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDataManager.swift; sourceTree = "<group>"; };
@@ -145,15 +141,11 @@
 		C697EDDA238E90D3006504D4 /* GithubSearchUser-Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				C697EE0E238EB272006504D4 /* Model */,
-				C697EE0B238EB04B006504D4 /* Helper */,
 				C697EDDB238E90D3006504D4 /* AppDelegate.swift */,
-				C697EDDF238E90D3006504D4 /* ViewController.swift */,
-				C697EE1B238EB4F7006504D4 /* ViewControllerDataManager.swift */,
-				C697EE21238EBC8A006504D4 /* SearchUserTableViewCell.swift */,
-				C697EDE4238E90D6006504D4 /* Assets.xcassets */,
-				C697EE1F238EBAAF006504D4 /* Launch Screen.storyboard */,
-				C697EDE9238E90D6006504D4 /* Info.plist */,
+				C6A5A6B22391568800C94FED /* View */,
+				C6A5A6AF2391563C00C94FED /* Networking */,
+				C697EE0B238EB04B006504D4 /* Helper */,
+				C6A5A6B32391569B00C94FED /* Resources */,
 			);
 			path = "GithubSearchUser-Tutorial";
 			sourceTree = "<group>";
@@ -180,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				C697EE0C238EB05A006504D4 /* UIPreviewExtension.swift */,
-				C697EE15238EB49D006504D4 /* GithubAPIProvider.swift */,
 				C697EE17238EB4B7006504D4 /* HTTPHeaderLinkParser.swift */,
 				C697EE19238EB4D1006504D4 /* Debouncer.swift */,
 				C697EE1D238EB78A006504D4 /* Utility.swift */,
@@ -191,11 +182,38 @@
 		C697EE0E238EB272006504D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C697EE0F238EB29F006504D4 /* SearchUserParameter.swift */,
-				C697EE11238EB29F006504D4 /* SearchUserResponse.swift */,
-				C697EE10238EB29F006504D4 /* UserRepository.swift */,
+				C697EE0F238EB29F006504D4 /* GithubSearchUserModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C6A5A6AF2391563C00C94FED /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C697EE0E238EB272006504D4 /* Model */,
+				C697EE15238EB49D006504D4 /* GithubAPIProvider.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C6A5A6B22391568800C94FED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C697EDDF238E90D3006504D4 /* ViewController.swift */,
+				C697EE1B238EB4F7006504D4 /* ViewControllerDataManager.swift */,
+				C697EE21238EBC8A006504D4 /* SearchUserTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C6A5A6B32391569B00C94FED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C697EDE4238E90D6006504D4 /* Assets.xcassets */,
+				C697EE1F238EBAAF006504D4 /* Launch Screen.storyboard */,
+				C697EDE9238E90D6006504D4 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DCC0A341F937B6D2AC9C7B47 /* Frameworks */ = {
@@ -453,9 +471,7 @@
 				C697EE1E238EB78A006504D4 /* Utility.swift in Sources */,
 				C697EE1A238EB4D1006504D4 /* Debouncer.swift in Sources */,
 				C697EE0D238EB05A006504D4 /* UIPreviewExtension.swift in Sources */,
-				C697EE12238EB29F006504D4 /* SearchUserParameter.swift in Sources */,
-				C697EE14238EB29F006504D4 /* SearchUserResponse.swift in Sources */,
-				C697EE13238EB29F006504D4 /* UserRepository.swift in Sources */,
+				C697EE12238EB29F006504D4 /* GithubSearchUserModel.swift in Sources */,
 				C697EDDC238E90D3006504D4 /* AppDelegate.swift in Sources */,
 				C697EE16238EB49D006504D4 /* GithubAPIProvider.swift in Sources */,
 			);
@@ -613,7 +629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "GithubSearchUser-Tutorial/Info.plist";
+				INFOPLIST_FILE = "GithubSearchUser-Tutorial/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -631,7 +647,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "GithubSearchUser-Tutorial/Info.plist";
+				INFOPLIST_FILE = "GithubSearchUser-Tutorial/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
