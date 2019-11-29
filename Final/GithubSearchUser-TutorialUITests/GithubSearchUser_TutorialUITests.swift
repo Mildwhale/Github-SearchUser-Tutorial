@@ -10,34 +10,38 @@ import XCTest
 
 class GithubSearchUser_TutorialUITests: XCTestCase {
 
+    let app = XCUIApplication()
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app.launch() // 앱 실행
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
-
-    func testExample() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    /// 검색어를 입력하면, 검색 결과를 확인할 수 있는가?
+    func testSearchUserResultAvailable() {
+        let searchField = app.searchFields.firstMatch
+        searchField.tap() // 1. SearchBar의 TextField를 탭
+        searchField.typeText("Mildwhale\n") // 2. 검색어 입력 후 키보드 내림
+        
+        let resultCellOfFirst = app.cells.firstMatch
+        XCTAssert(resultCellOfFirst.waitForExistence(timeout: 15.0)) // 3. 검색 결과가 있는지 확인 (최대 15초 동안 대기)
     }
-
-    func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
+    
+    /// 검색어를 삭제하면, 검색 결과가 초기화 되는가?
+    func testCanResetSearchResult() {
+        let searchField = app.searchFields.firstMatch
+        searchField.tap() // 1. SearchBar의 TextField를 탭
+        searchField.typeText("Mildwhale\n") // 2. 검색어 입력 후 키보드 내림
+        
+        let resultCellOfFirst = app.cells.firstMatch
+        XCTAssert(resultCellOfFirst.waitForExistence(timeout: 15.0)) // 3. 검색 결과가 있는지 확인 (최대 15초 동안 대기)
+        
+        searchField.clearText() // 4. 검색어 삭제
+        
+        XCTAssertFalse(resultCellOfFirst.exists) // 5. 검색 결과가 없는지 확인
     }
 }
