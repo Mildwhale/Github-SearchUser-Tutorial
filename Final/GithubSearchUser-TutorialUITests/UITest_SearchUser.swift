@@ -33,6 +33,12 @@ class UITest_SearchUser: XCTestCase {
         XCTAssertTrue(resultCellOfFirst.waitForExistence(timeout: 15.0)) // 3. 검색 결과가 있는지 확인 (최대 15초 동안 대기)
     }
     
+    /// 검색어를 입력하면, 검색 결과를 확인할 수 있는가? (모듈화)
+    func test_SearchUserResultAvailableWithModules() {
+        검색어를_입력한다(keyword: "Mildwhale\n")
+        검색결과가_있는지_확인한다()
+    }
+    
     /// 검색어를 삭제하면, 검색 결과가 초기화 되는가?
     func test_CanResetSearchResult() {
         let searchField = app.searchFields.firstMatch
@@ -85,5 +91,32 @@ class UITest_SearchUser: XCTestCase {
         tableView.swipeUp() // 4. 테이블 뷰를 상단으로 스크롤
         
         XCTAssertNotEqual(firstResultsCount, resultCells.count) // 5. 셀의 개수를 비교하여, 다음 페이지의 데이터가 추가되었는지 확인
+    }
+}
+
+extension UITest_SearchUser {
+    private func 검색어를_입력한다(keyword: String) {
+        let searchField = app.searchFields.firstMatch
+        XCTAssertTrue(searchField.exists)
+        
+        searchField.tap()
+        searchField.typeText(keyword)
+    }
+    
+    private func 검색어를_초기화한다() {
+        let searchField = app.searchFields.firstMatch
+        XCTAssertTrue(searchField.exists)
+        
+        searchField.clearText()
+    }
+    
+    private func 검색결과가_있는지_확인한다(timeout interval: TimeInterval = 15.0) {
+        let resultCellOfFirst = app.cells.firstMatch
+        XCTAssertTrue(resultCellOfFirst.waitForExistence(timeout: interval))
+    }
+    
+    private func 검색결과가_없는지_확인한다() {
+        let resultCellOfFirst = app.cells.firstMatch
+        XCTAssertFalse(resultCellOfFirst.exists)
     }
 }
