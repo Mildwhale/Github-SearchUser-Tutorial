@@ -1,5 +1,5 @@
 //
-//  GithubSearchUser_TutorialUITests.swift
+//  UITest_SearchUser.swift
 //  GithubSearchUser-TutorialUITests
 //
 //  Created by Wayne Kim on 2019/11/27.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class GithubSearchUser_TutorialUITests: XCTestCase {
+class UITest_SearchUser: XCTestCase {
 
     let app = XCUIApplication()
     

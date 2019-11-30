@@ -15,7 +15,7 @@
 		C697EDE0238E90D3006504D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDDF238E90D3006504D4 /* ViewController.swift */; };
 		C697EDE5238E90D6006504D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C697EDE4238E90D6006504D4 /* Assets.xcassets */; };
 		C697EDF3238E90D6006504D4 /* GithubSearchUser_TutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDF2238E90D6006504D4 /* GithubSearchUser_TutorialTests.swift */; };
-		C697EDFE238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDFD238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift */; };
+		C697EDFE238E90D6006504D4 /* UITest_SearchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDFD238E90D6006504D4 /* UITest_SearchUser.swift */; };
 		C697EE0D238EB05A006504D4 /* UIPreviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE0C238EB05A006504D4 /* UIPreviewExtension.swift */; };
 		C697EE12238EB29F006504D4 /* GithubSearchUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE0F238EB29F006504D4 /* GithubSearchUserModel.swift */; };
 		C697EE16238EB49D006504D4 /* GithubAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EE15238EB49D006504D4 /* GithubAPIProvider.swift */; };
@@ -62,7 +62,7 @@
 		C697EDF2238E90D6006504D4 /* GithubSearchUser_TutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchUser_TutorialTests.swift; sourceTree = "<group>"; };
 		C697EDF4238E90D6006504D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C697EDF9238E90D6006504D4 /* GithubSearchUser-TutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GithubSearchUser-TutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C697EDFD238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchUser_TutorialUITests.swift; sourceTree = "<group>"; };
+		C697EDFD238E90D6006504D4 /* UITest_SearchUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITest_SearchUser.swift; sourceTree = "<group>"; };
 		C697EDFF238E90D7006504D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C697EE0C238EB05A006504D4 /* UIPreviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPreviewExtension.swift; sourceTree = "<group>"; };
 		C697EE0F238EB29F006504D4 /* GithubSearchUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchUserModel.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				C633081F23918A33002F4649 /* UITestHelper.swift */,
-				C697EDFD238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift */,
+				C697EDFD238E90D6006504D4 /* UITest_SearchUser.swift */,
 				C697EDFF238E90D7006504D4 /* Info.plist */,
 			);
 			path = "GithubSearchUser-TutorialUITests";
@@ -492,7 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C697EDFE238E90D6006504D4 /* GithubSearchUser_TutorialUITests.swift in Sources */,
+				C697EDFE238E90D6006504D4 /* UITest_SearchUser.swift in Sources */,
 				C633082023918A33002F4649 /* UITestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
