@@ -10,24 +10,41 @@ import UIKit
 import SnapKit
 import SafariServices
 
-final class ViewController: UIViewController {
+final class ViewController: BaseViewController {
+    private let rootStackView: UIStackView = UIStackView()
+    private let searchBar: UISearchBar = UISearchBar()
+    private let tableView: UITableView = UITableView()
+    private let activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView(style: .medium)
     
-    private let searchBar = UISearchBar()
-    private let tableView = UITableView()
-    private let activityIndicatorView = UIActivityIndicatorView(style: .medium)
-    private let dataManager = ViewControllerDataManager()
+    private let dataManager: ViewControllerDataManager = ViewControllerDataManager()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    override func addSubview() {
+        view.addSubview(rootStackView)
+        view.addSubview(activityIndicatorView)
         
-        setup()
-        layout()
+        rootStackView.addArrangedSubview(searchBar)
+        rootStackView.addArrangedSubview(tableView)
     }
     
-    private func setup() {
+    override func layout() {
+        rootStackView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.leading.trailing.bottom.equalToSuperview()
+        }
+        
+        activityIndicatorView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+    }
+    
+    override func style() {
         navigationItem.title = "Github Search User"
+        
         view.backgroundColor = .white
+        
+        rootStackView.axis = .vertical
+        rootStackView.alignment = .fill
+        
         dataManager.delegate = self
         searchBar.delegate = self
         activityIndicatorView.hidesWhenStopped = true
@@ -40,22 +57,8 @@ final class ViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
     }
     
-    private func layout() {
-        let rootStackView = UIStackView(arrangedSubviews: [searchBar, tableView])
-        rootStackView.axis = .vertical
-        rootStackView.alignment = .fill
+    override func behavior() {
         
-        self.view.addSubview(rootStackView)
-        self.view.addSubview(activityIndicatorView)
-
-        rootStackView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.leading.trailing.bottom.equalToSuperview()
-        }
-        
-        activityIndicatorView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-        }
     }
 }
 

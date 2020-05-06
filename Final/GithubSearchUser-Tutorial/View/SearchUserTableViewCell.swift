@@ -44,7 +44,8 @@ final class SearchUserTableViewCell: UITableViewCell {
     }
     
     func update(user: GithubSearchUser.User) {
-        avatarImageView.kf.setImage(with: user.avartarUrl)
+        avatarImageView.kf.indicatorType = .activity
+        avatarImageView.kf.setImage(with: user.avartarUrl, options: [.transition(.fade(0.2))])
         nameLabel.text = user.name
     }
 }
