@@ -11,6 +11,7 @@
 		719609F8C595B4080A5B6B8B /* Pods_GithubSearchUser_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A282FAD883C24B6B1EB2F0 /* Pods_GithubSearchUser_Tutorial.framework */; };
 		B8FFCA4C4A59F5482BDEC41D /* Pods_GithubSearchUser_Tutorial_GithubSearchUser_TutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAD1030EBB1FAF7CF08984F /* Pods_GithubSearchUser_Tutorial_GithubSearchUser_TutorialUITests.framework */; };
 		C633082023918A33002F4649 /* UITestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633081F23918A33002F4649 /* UITestHelper.swift */; };
+		C635EA18246304E10050E36E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C635EA17246304E10050E36E /* BaseViewController.swift */; };
 		C697EDDC238E90D3006504D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDDB238E90D3006504D4 /* AppDelegate.swift */; };
 		C697EDE0238E90D3006504D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDDF238E90D3006504D4 /* ViewController.swift */; };
 		C697EDE5238E90D6006504D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C697EDE4238E90D6006504D4 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		B792E683D7AB17DBD0C60ADE /* Pods-GithubSearchUser-TutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-TutorialTests.release.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-TutorialTests/Pods-GithubSearchUser-TutorialTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA94A97B6BB4989A9CCD71F8 /* Pods-GithubSearchUser-Tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-Tutorial.release.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-Tutorial/Pods-GithubSearchUser-Tutorial.release.xcconfig"; sourceTree = "<group>"; };
 		C633081F23918A33002F4649 /* UITestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelper.swift; sourceTree = "<group>"; };
+		C635EA17246304E10050E36E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C697EDD8238E90D3006504D4 /* GithubSearchUser-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GithubSearchUser-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C697EDDB238E90D3006504D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C697EDDF238E90D3006504D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C635EA15246304B60050E36E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C635EA16246304CA0050E36E /* Base */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C635EA16246304CA0050E36E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C635EA17246304E10050E36E /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		C697EDCF238E90D3006504D4 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +163,7 @@
 			children = (
 				C697EDDB238E90D3006504D4 /* AppDelegate.swift */,
 				C6A5A6B22391568800C94FED /* View */,
+				C635EA15246304B60050E36E /* Common */,
 				C6A5A6AF2391563C00C94FED /* Networking */,
 				C697EE0B238EB04B006504D4 /* Helper */,
 				C6A5A6B32391569B00C94FED /* Resources */,
@@ -469,6 +488,7 @@
 			files = (
 				C697EE22238EBC8A006504D4 /* SearchUserTableViewCell.swift in Sources */,
 				C697EDE0238E90D3006504D4 /* ViewController.swift in Sources */,
+				C635EA18246304E10050E36E /* BaseViewController.swift in Sources */,
 				C697EE18238EB4B7006504D4 /* HTTPHeaderLinkParser.swift in Sources */,
 				C697EE1C238EB4F7006504D4 /* ViewControllerDataManager.swift in Sources */,
 				C697EE1E238EB78A006504D4 /* Utility.swift in Sources */,
