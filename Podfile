@@ -9,7 +9,6 @@ target 'GithubSearchUser-Tutorial' do
   pod 'Kingfisher'
   pod 'SnapKit'
   pod 'Moya', '~> 13.0'
-  pod 'RxSwift'
 
   target 'GithubSearchUser-TutorialTests' do
     inherit! :search_paths

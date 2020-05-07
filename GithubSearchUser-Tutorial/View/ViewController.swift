@@ -10,55 +10,18 @@ import UIKit
 import SnapKit
 import SafariServices
 
-final class ViewController: BaseViewController {
-    private let rootStackView: UIStackView = UIStackView()
-    private let searchBar: UISearchBar = UISearchBar()
-    private let tableView: UITableView = UITableView()
-    private let activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView(style: .medium)
-    
+final class ViewController: BaseSearchViewController {
     private let dataManager: ViewControllerDataManager = ViewControllerDataManager()
 
-    override func addSubview() {
-        view.addSubview(rootStackView)
-        view.addSubview(activityIndicatorView)
-        
-        rootStackView.addArrangedSubview(searchBar)
-        rootStackView.addArrangedSubview(tableView)
-    }
-    
-    override func layout() {
-        rootStackView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.leading.trailing.bottom.equalToSuperview()
-        }
-        
-        activityIndicatorView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-        }
-    }
-    
     override func style() {
+        super.style()
         navigationItem.title = "Github Search User"
-        
-        view.backgroundColor = .white
-        
-        rootStackView.axis = .vertical
-        rootStackView.alignment = .fill
         
         dataManager.delegate = self
         searchBar.delegate = self
-        activityIndicatorView.hidesWhenStopped = true
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(SearchUserTableViewCell.self, forCellReuseIdentifier: "SearchUserTableViewCell")
-        tableView.keyboardDismissMode = .onDrag
-        tableView.estimatedRowHeight = 60.0
-        tableView.rowHeight = UITableView.automaticDimension
-    }
-    
-    override func behavior() {
-        
     }
 }
 
