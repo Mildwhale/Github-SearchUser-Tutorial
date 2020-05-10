@@ -13,6 +13,8 @@
 		C633082023918A33002F4649 /* UITestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633081F23918A33002F4649 /* UITestHelper.swift */; };
 		C635EA18246304E10050E36E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C635EA17246304E10050E36E /* BaseViewController.swift */; };
 		C635EA1A246450460050E36E /* BaseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C635EA19246450460050E36E /* BaseSearchViewController.swift */; };
+		C635EA1C24645CF20050E36E /* Bundle+info.swift in Sources */ = {isa = PBXBuildFile; fileRef = C635EA1B24645CF20050E36E /* Bundle+info.swift */; };
+		C68079C82466C1CF001E1E79 /* ArchitectureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68079C72466C1CF001E1E79 /* ArchitectureListViewController.swift */; };
 		C697EDDC238E90D3006504D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDDB238E90D3006504D4 /* AppDelegate.swift */; };
 		C697EDE0238E90D3006504D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697EDDF238E90D3006504D4 /* ViewController.swift */; };
 		C697EDE5238E90D6006504D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C697EDE4238E90D6006504D4 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		C633081F23918A33002F4649 /* UITestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelper.swift; sourceTree = "<group>"; };
 		C635EA17246304E10050E36E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C635EA19246450460050E36E /* BaseSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchViewController.swift; sourceTree = "<group>"; };
+		C635EA1B24645CF20050E36E /* Bundle+info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+info.swift"; sourceTree = "<group>"; };
+		C68079C72466C1CF001E1E79 /* ArchitectureListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListViewController.swift; sourceTree = "<group>"; };
 		C697EDD8238E90D3006504D4 /* GithubSearchUser-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GithubSearchUser-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C697EDDB238E90D3006504D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C697EDDF238E90D3006504D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		C68079C92466C232001E1E79 /* ArchitectureList */ = {
+			isa = PBXGroup;
+			children = (
+				C68079C72466C1CF001E1E79 /* ArchitectureListViewController.swift */,
+			);
+			path = ArchitectureList;
+			sourceTree = "<group>";
+		};
 		C697EDCF238E90D3006504D4 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +212,7 @@
 				C697EE17238EB4B7006504D4 /* HTTPHeaderLinkParser.swift */,
 				C697EE19238EB4D1006504D4 /* Debouncer.swift */,
 				C697EE1D238EB78A006504D4 /* Utility.swift */,
+				C635EA1B24645CF20050E36E /* Bundle+info.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -224,6 +237,7 @@
 		C6A5A6B22391568800C94FED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C68079C92466C232001E1E79 /* ArchitectureList */,
 				C697EDDF238E90D3006504D4 /* ViewController.swift */,
 				C697EE1B238EB4F7006504D4 /* ViewControllerDataManager.swift */,
 				C697EE21238EBC8A006504D4 /* SearchUserTableViewCell.swift */,
@@ -496,6 +510,8 @@
 				C697EE18238EB4B7006504D4 /* HTTPHeaderLinkParser.swift in Sources */,
 				C697EE1C238EB4F7006504D4 /* ViewControllerDataManager.swift in Sources */,
 				C697EE1E238EB78A006504D4 /* Utility.swift in Sources */,
+				C68079C82466C1CF001E1E79 /* ArchitectureListViewController.swift in Sources */,
+				C635EA1C24645CF20050E36E /* Bundle+info.swift in Sources */,
 				C697EE1A238EB4D1006504D4 /* Debouncer.swift in Sources */,
 				C697EE0D238EB05A006504D4 /* UIPreviewExtension.swift in Sources */,
 				C697EE12238EB29F006504D4 /* GithubSearchUserModel.swift in Sources */,
